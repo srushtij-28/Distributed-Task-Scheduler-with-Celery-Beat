@@ -1,0 +1,56 @@
+🧠 Why This Is Important
+
+Without scheduling:
+Admin
+   │
+   ▼
+Run Script Manually
+
+With Celery Beat:
+Celery Beat
+      │
+Every Hour
+      ▼
+Redis Queue
+      │
+Celery Worker
+      ▼
+Scheduled Task
+
+Common scheduled tasks:
+📧 Daily emails
+📊 Weekly reports
+💾 Database backups
+🔄 Data synchronization
+🧹 Cache cleanup
+
+Benefits:
+✅ Automatic execution
+✅ Distributed scheduling
+✅ Reliable recurring jobs
+✅ Easy scaling
+
+Used By :
+Instagram
+Shopify
+Reddit
+Django applications
+Enterprise ERP systems
+
+🛠 Tech Stack
+Python
+Flask
+Celery
+Celery Beat
+Redis
+Docker
+
+📂 Project Structure
+celery-beat-scheduler/
+│
+├── app.py
+├── tasks.py
+├── celeryconfig.py
+├── requirements.txt
+├── docker-compose.yml
+└── README.md
