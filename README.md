@@ -23,3 +23,16 @@ A Flask application demonstrating scheduled background tasks using Celery Beat.
 ```bash
 pip install -r requirements.txt
 ```
+
+## Start Services
+Start Redis
+docker compose up -d
+
+Start Celery Worker
+celery -A tasks worker --loglevel=info
+
+Start Celery Beat
+celery -A tasks beat --loglevel=info
+
+Run Flask
+python app.py
